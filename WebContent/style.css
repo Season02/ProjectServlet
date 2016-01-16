@@ -1,0 +1,97 @@
+.headline
+{
+	background-color:#4F4F4F;
+	height:52px;
+}
+.ipPanel
+{
+	color:hsla(0,0%,82%,1.00);
+	text-align:center;
+	font-size:200%;
+	line-height: 190%;
+}
+.contentPanel
+{
+	margin:76px auto;
+	padding:0px;
+	width:420px;
+	height:980px;
+	background-color:hsla(0,0%,82%,1.00);
+	border-radius:8px;
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+}
+.area1
+{
+	padding-top:6%;
+	margin: 0 auto;
+	text-align:center;
+}
+.login
+{
+	padding-top:6%;
+	margin: 0 auto;
+	width:80%;
+}
+.test_tb
+{
+	margin:0 auto;
+	margin-bottom:3%;
+	border:1px solid #ffffff;
+	border-collapse:collapse;
+}
+.login_tb
+{
+	margin:0 auto;
+	margin-bottom:6%;
+	border:1px solid #ffffff;
+	border-collapse:collapse;
+}
+.login_tb td
+{
+	border:1px solid #ffffff;
+	text-align:center;
+}
+body 
+{
+	/*padding-bottom: 40px;*/
+	/*padding-top: 60px;*/
+	/*min-height: 101%;*/
+	background-color: hsla(0,0%,99%,1.00);
+	color: #404040;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 18px;
+	margin: 0;
+}
+#header
+{
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	/*z-index: 1030;*/
+	/*margin-bottom: 18px;*/
+	overflow: visible;
+	background-color: #2C2C2C;
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+	clear: both;
+	content: "";
+	padding-right: 5px;
+	transition: top .5s;
+	/*display: table;*/
+}
+.timer
+{
+	margin: 0 auto;
+	width: 50%;
+	text-align: center;
+}
+
+.gizle {
+  top: -90px;
+}
+.sabit {
+  top:0;
+	z-index: 9999;
+}
