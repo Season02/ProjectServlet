@@ -35,7 +35,7 @@ public class HelloServlet extends HttpServlet
 		PrintWriter out = response.getWriter();
 		String username = request.getParameter("user");
 		if(username.compareTo("sayhanabi")==0)
-				username = "say花火";
+				username = "Season02";
 		out.println("<html><head><title>");
 		out.println("Art Sword Online");
 		out.println("</title></head><body>");		
