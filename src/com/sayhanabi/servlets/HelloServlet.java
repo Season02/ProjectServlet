@@ -34,7 +34,7 @@ public class HelloServlet extends HttpServlet
 //		response.getWriter().write("Finally,get you!");
 		PrintWriter out = response.getWriter();
 		String username = request.getParameter("user");
-		if(username.compareTo("sayhanabi")==0)
+		if(username.compareTo("Season02")==0)
 				username = "Season02";
 		out.println("<html><head><title>");
 		out.println("Art Sword Online");
