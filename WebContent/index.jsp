@@ -20,8 +20,9 @@
 	</div>
 	<div class="contentPanel">
 		<div class="login">
-			<form action="http://localhost:8080/ProjectServlet/LoginServlet" method="post">
+			<form action="http://localhost/ProjectServlet/LoginServlet" method="post">
 				<table class="login_tb">
+					<caption>Login</caption>
 					<tr>
 						<td>用户：</td>
 						<td><input type="text" name="username" /></td>
@@ -54,7 +55,7 @@
                 </tr>
             </table>
             <input value="servlet" type="button" 
-			onClick="javascript:window.location='http://<%=address.getHostAddress()%>:8080/ProjectServlet/HelloServlet?user=Season02'" />
+			onClick="javascript:window.location='http://<%=address.getHostAddress()%>/ProjectServlet/HelloServlet?user=Season02'" />
 			<h2>
 			Hello finally meet you!
 			</h2>

@@ -36,19 +36,22 @@
 {
 	margin:0 auto;
 	margin-bottom:3%;
-	border:1px solid #ffffff;
+/* 	border:1px solid #i00; */
 	border-collapse:collapse;
 }
 .login_tb
 {
 	margin:0 auto;
 	margin-bottom:6%;
-	border:1px solid #ffffff;
 	border-collapse:collapse;
+}
+.login_tb caption
+{
+	color:fff;
 }
 .login_tb td
 {
-	border:1px solid #ffffff;
+	border:1px solid #000;
 	text-align:center;
 }
 body 

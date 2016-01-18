@@ -38,7 +38,7 @@ public class HelloServlet extends HttpServlet
 				username = "Season02";
 		out.println("<html><head><title>");
 		out.println("Art Sword Online");
-		out.println("</title></head><body>");		
+		out.println("</title></head><body>");
 		out.println("<h1>こにちわ、やっとあなたに会いました," + username + " !</h1>");
 		String url = request.getRequestURL().toString();
 		out.println("<h2>まだ会えましたね ! </h2>");
