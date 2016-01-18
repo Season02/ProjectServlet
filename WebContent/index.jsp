@@ -54,7 +54,7 @@
                 </tr>
             </table>
             <input value="servlet" type="button" 
-			onClick="javascript:window.location='http://<%=address.getHostAddress()%>:8080/ProjectServlet/HelloServlet?user=sayhanabi'" />
+			onClick="javascript:window.location='http://<%=address.getHostAddress()%>:8080/ProjectServlet/HelloServlet?user=Season02'" />
 			<h2>
 			Hello finally meet you!
 			</h2>
