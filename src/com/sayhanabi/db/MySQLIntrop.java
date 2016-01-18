@@ -25,8 +25,8 @@ public class MySQLIntrop
 //		Map<String,Object> map = new HashMap<String,Object>();
 //		//map.put("id", 190);
 //		map.put("age", 66);
-//		map.put("sex", "ÄÐ");
-//		map.put("department", "¿ÆÑ§");
+//		map.put("sex", "ç”·");
+//		map.put("department", "ç§‘å­¦");
 
 		MySQLIntrop dbc = new MySQLIntrop();
 		dbc.connect();
