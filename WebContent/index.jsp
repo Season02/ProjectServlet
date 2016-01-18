@@ -40,7 +40,6 @@
 				</table>		                   
         	</form>
 		</div>
-        <hr/>
     	<div class="area1" >   	
         	<table class="test_tb" >
             	<tr>
