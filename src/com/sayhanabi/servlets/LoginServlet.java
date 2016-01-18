@@ -42,7 +42,7 @@ public class LoginServlet extends HttpServlet {
         response.getWriter().println("<title>登录信息</title>");      
         response.getWriter().println("</head>");    
         response.getWriter().println("<body>");     
-        response.getWriter().println("欢迎[" + username + "]用户登录成功！！！");    
+        response.getWriter().println("Welcome [" + username + "] user login successful!!!");    
         response.getWriter().println("</body>");    
         response.getWriter().println("</html>");
 	}
