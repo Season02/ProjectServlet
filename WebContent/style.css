@@ -22,9 +22,12 @@
 }
 .area1
 {
-	padding-top:6%;
+	padding-top:3%;
+	padding-bottom:1%;
 	margin: 0 auto;
 	text-align:center;
+	background-color:hsla(0,0%,70%,1.00);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) inset;
 }
 .login
 {
@@ -36,8 +39,12 @@
 {
 	margin:0 auto;
 	margin-bottom:3%;
-/* 	border:1px solid #i00; */
+	border-radius:8px;
 	border-collapse:collapse;
+}
+.test_tb td
+{
+	text-align:center;
 }
 .login_tb
 {
@@ -47,11 +54,11 @@
 }
 .login_tb caption
 {
-	color:fff;
+	color:#000;
 }
 .login_tb td
 {
-	border:1px solid #000;
+/* 	border:1px solid #000; */
 	text-align:center;
 }
 body 
