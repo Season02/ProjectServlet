@@ -35,14 +35,17 @@ public class LoginServlet extends HttpServlet {
         //System.out.println("password=" + password);  
         //设置编码格式  
         response.setContentType("text/html;charset=GB2312");  
-          
+        
         //返回html页面  
         response.getWriter().println("<html>");  
         response.getWriter().println("<head>");     
         response.getWriter().println("<title>登录信息</title>");      
         response.getWriter().println("</head>");    
         response.getWriter().println("<body>");     
-        response.getWriter().println("Welcome [" + username + "] user login successful!!!");    
+        if(username.equals("Season02") && password.equals("651234"))
+        	response.getWriter().println("Welcome [" + username + "] user login successful!!!");  
+        else
+        	response.getWriter().println("err!!!");
         response.getWriter().println("</body>");    
         response.getWriter().println("</html>");
 	}
