@@ -35,13 +35,13 @@ public class HelloServlet extends HttpServlet
 		PrintWriter out = response.getWriter();
 		String username = request.getParameter("user");
 		if(username.compareTo("sayhanabi")==0)
-				username = "say»¨»ğ";
+				username = "sayèŠ±ç«";
 		out.println("<html><head><title>");
 		out.println("Art Sword Online");
 		out.println("</title></head><body>");		
-		out.println("<h1>¤³¤Ë¤Á¤ï¡¢¤ä¤Ã¤È¤¢¤Ê¤¿¤Ë»á¤¤¤Ş¤·¤¿," + username + " !</h1>");
+		out.println("<h1>ã“ã«ã¡ã‚ã€ã‚„ã£ã¨ã‚ãªãŸã«ä¼šã„ã¾ã—ãŸ," + username + " !</h1>");
 		String url = request.getRequestURL().toString();
-		out.println("<h2>¤Ş¤À»á¤¨¤Ş¤·¤¿¤Í ! </h2>");
+		out.println("<h2>ã¾ã ä¼šãˆã¾ã—ãŸã­ ! </h2>");
 		out.println("<h2> getRequestURL: " + url + " </h2>");
 		out.println("<button href='/ServletDemo'>Go Home!</button>");
 		out.println("</body></html>");

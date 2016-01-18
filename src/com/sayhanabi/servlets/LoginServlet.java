@@ -30,19 +30,19 @@ public class LoginServlet extends HttpServlet {
 		String username = request.getParameter("username");     
         String password = request.getParameter("password");        
           
-        //·şÎñÆ÷¶Ë´òÓ¡ĞÅÏ¢  
+        //æœåŠ¡å™¨ç«¯æ‰“å°ä¿¡æ¯  
         //System.out.println("username=" + username);  
         //System.out.println("password=" + password);  
-        //ÉèÖÃ±àÂë¸ñÊ½  
+        //è®¾ç½®ç¼–ç æ ¼å¼  
         response.setContentType("text/html;charset=GB2312");  
           
-        //·µ»ØhtmlÒ³Ãæ  
+        //è¿”å›htmlé¡µé¢  
         response.getWriter().println("<html>");  
         response.getWriter().println("<head>");     
-        response.getWriter().println("<title>µÇÂ¼ĞÅÏ¢</title>");      
+        response.getWriter().println("<title>ç™»å½•ä¿¡æ¯</title>");      
         response.getWriter().println("</head>");    
         response.getWriter().println("<body>");     
-        response.getWriter().println("»¶Ó­[" + username + "]ÓÃ»§µÇÂ¼³É¹¦£¡£¡£¡");    
+        response.getWriter().println("æ¬¢è¿[" + username + "]ç”¨æˆ·ç™»å½•æˆåŠŸï¼ï¼ï¼");    
         response.getWriter().println("</body>");    
         response.getWriter().println("</html>");
 	}
