@@ -40,7 +40,7 @@ public class MySQLIntrop
 			{
 				System.out.print(entry.getKey() + "  " + entry.getValue() + "  ");
 			}
-			System.out.println();
+			System.out.print("");
 		}
 		
 		
