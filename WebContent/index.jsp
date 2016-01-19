@@ -15,7 +15,7 @@
 	<div id="header" class="headline">
 		<div class="ipPanel">
 			<%= address.getHostAddress() %>
-			Markup ${pageContext.request.contextPath}/loginServlet
+			Mark up ${pageContext.request.contextPath}/loginServlet
 		</div>
 	</div>
 	<div class="contentPanel">
