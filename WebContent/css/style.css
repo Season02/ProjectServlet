@@ -105,10 +105,12 @@ body
 	text-align: center;
 }
 
-.g {
-  top: -90px;
+.g 
+{
+	margin-top: -90px;
 }
-.s {
-  top:0;
+.s 
+{
+	margin-top:0;
 	z-index: 9999;
 }
