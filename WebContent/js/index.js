@@ -35,3 +35,10 @@ $(function()
         docTop = $(document).scrollTop();	
     });
 });
+$(document).ready(function()
+{
+	$(".contentPanel").click(function()
+	{
+		$(".area1").slideToggle("slow");
+	});
+});
