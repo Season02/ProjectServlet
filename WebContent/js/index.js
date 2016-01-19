@@ -1,30 +1,37 @@
 $(function()
 {	
-    var cubuk_seviye = $(document).scrollTop();
-    var header_yuksekligi = $('.headline').outerHeight();
+    var docTop = $(document).scrollTop();
+    var header = $('.headline').outerHeight();
 
     $(window).scroll(function() 
     {
-        var kaydirma_cubugu = $(document).scrollTop();
+        var in_top = $(document).scrollTop();
 
-        if (kaydirma_cubugu > header_yuksekligi)
+        if (in_top > header)
         {
-        	$('.headline').addClass('g');
+        	// $(".panel").slideToggle("slow");
+        	//$('.headline').addClass('g');
+        	//$(".headline").slideToggle("slow");
+        	$(".headline").slideUp();
         } 
         else 
         {
-        	$('.headline').removeClass('g');
+        	//$(".headline").slideToggle("slow");
+        	//$('.headline').removeClass('g');
+        	$(".headline").slideDown();
         }
 
-        if (kaydirma_cubugu > cubuk_seviye)
+        if (in_top > docTop)
         {
-        	$('.headline').removeClass('s');
+        	//$(".headline").slideToggle("slow");
+        	//$('.headline').removeClass('s');
         } 
         else 
         {
-        	$('.headline').addClass('s');
+        	//$(".headline").slideToggle("slow");
+        	//$('.headline').addClass('s');
         }				
 
-        cubuk_seviye = $(document).scrollTop();	
+        docTop = $(document).scrollTop();	
     });
 });

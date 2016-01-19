@@ -24,6 +24,7 @@
 }
 .area1
 {
+	display:none;
 	padding-top:3%;
 	padding-bottom:1%;
 	margin: 0 auto;
@@ -107,10 +108,11 @@ body
 
 .g 
 {
-	margin-top: -90px;
+	
+	top: -5%;
 }
 .s 
 {
-	margin-top:0px;
+	top:0 ;
 	z-index: 9999;
 }
