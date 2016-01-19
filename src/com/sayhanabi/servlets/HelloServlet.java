@@ -31,7 +31,6 @@ public class HelloServlet extends HttpServlet
 	{
 		request.setCharacterEncoding("GB2312");
 		response.setContentType("text/html;charset=GB2312");
-//		response.getWriter().write("Finally,get you!");
 		PrintWriter out = response.getWriter();
 		String username = request.getParameter("user");
 		if(username.compareTo("Season02")==0)
