@@ -6,21 +6,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Hello Hello ~!</title>
 	<style type="text/css">
-		<%@include file="style.css" %>
+		<%@include file="/css/style.css" %>
 	</style>
+	<script src="/ProjectServlet/js/roll.js"></script>
 	<% java.net.InetAddress address = java.net.InetAddress.getLocalHost(); %>
 	<% java.lang.String ip = address.getHostAddress(); %>
 </head>
 <body>
-	<div id="header" class="headline">
-		<div class="ipPanel">
-			<%= address.getHostAddress() %>
-			Mark up ${pageContext.request.contextPath}/loginServlet
-		</div>
-	</div>
 	<div class="contentPanel">
 		<div class="login">
-			<form action="http://localhost/ProjectServlet/LoginServlet" method="post">
+			<form action="LoginServlet" method="post">
 				<table class="login_tb">
 					<caption>Login</caption>
 					<tr>
@@ -54,7 +49,7 @@
                 </tr>
             </table>
             <input value="servlet" type="button" 
-			onClick="javascript:window.location='http://<%=address.getHostAddress()%>/ProjectServlet/HelloServlet?user=Season02'" />
+			onClick="javascript:window.location='HelloServlet?user=Season02'" />
 			<h2>
 			Hello finally meet you!
 			</h2>
@@ -67,5 +62,13 @@
 			Today`s date is <%= d.toString() %>
     	</div>
     </div>	
+	<div id="header" class="headline">
+		<div class="ipPanel">
+			<%= address.getHostAddress() %>
+			${pageContext.request.contextPath}
+		</div>
+	</div>
+	<script src="/ProjectServlet/js/jquery.min.js" ></script>
+	<script src="/ProjectServlet/js/index.js" ></script>
 </body>
 </html>
