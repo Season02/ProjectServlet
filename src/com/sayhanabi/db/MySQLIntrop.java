@@ -17,8 +17,31 @@ public class MySQLIntrop
 	private final String CLASSPATCH = "com.mysql.jdbc.Driver";
 	private final String ACCOUNT = "root";
 	private final String PASSWORD = "admin";
-	private final String URL = "jdbc:mysql://localhost:3306/mall";
+	private final String URL = "jdbc:mysql://localhost:3306/small";
 	private final String MYSQL_BASIC_URL = "jdbc:mysql://localhost:3306/"; 
+	
+	private static MySQLIntrop instance = new MySQLIntrop();
+	
+	/**
+	 * get a public instance insure just a object in context
+	 * @return current instance
+	 */
+	public static MySQLIntrop getMySQL()
+	{
+		return instance;
+	}
+	
+	private MySQLIntrop()
+	{
+		if(connect())
+		{
+			
+		}
+		else
+		{
+			
+		}
+	}
 	
 	public static void main(String[] args)
 	{
