@@ -13,26 +13,16 @@
 	<% java.lang.String ip = address.getHostAddress(); %>
 </head>
 <body>
-	<div class="contentPanel">
+	<div class="contentPanel">		
 		<div class="login">
+			<div class="caption">帐号登陆</div>
 			<form action="LoginServlet" method="post">
-				<table class="login_tb">
-					<caption>Login</caption>
-					<tr>
-						<td>用户：</td>
-						<td><input type="text" name="username" /></td>
-					</tr>
-					<tr>
-						<td>密码：</td>
-						<td><input type="password" name="password" /></td>
-					</tr>
-					<tr>
-						<td colspan="2" >
-							<input type="submit" value="登录" />
-							<input type="reset" value="清除" /> 
-						</td>
-					</tr>
-				</table>		                   
+				<input id="username" name="username" placeholder="请输入帐号" class="user-name" type="text">
+				<input id="password" name="password" placeholder="请输入密码" class="pass-word" type="password" autocomplete="off">
+				<div class="error-mess">
+					<span class="error-icon"></span><span id="error-message">帐户名或登录密码不正确，请重新输入</span>
+				</div>
+				<input class="logging" type="submit" value="登录" />
         	</form>
 		</div>
     	<div class="area1" >   	
@@ -61,7 +51,7 @@
 	    	<% java.util.Date d = new java.util.Date(); %>
 			Today`s date is <%= d.toString() %>
     	</div>
-    </div>	
+    </div>
 	<div id="header" class="headline">
 		<div class="ipPanel">
 			<%= address.getHostAddress() %>
