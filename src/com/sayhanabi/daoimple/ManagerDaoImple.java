@@ -6,6 +6,7 @@ import java.util.Map;
 
 import com.sayhanabi.dao.ManagerDao;
 import com.sayhanabi.db.MySQLIntrop;
+import com.sayhanabi.factory.DaoFactory;
 import com.sayhanabi.vo.Manager;
 
 public class ManagerDaoImple implements ManagerDao 
@@ -19,11 +20,11 @@ public class ManagerDaoImple implements ManagerDao
 	@Override
 	public int authenticationManager(String username, String password) 
 	{
-		int id = -1;		
-		MySQLIntrop mysql = new MySQLIntrop();
-		mysql.connect();
+		int id = -1;
+//		MySQLIntrop mysql = new MySQLIntrop();
+//		mysql.connect();
 		List<HashMap<String,String>> result = 
-				mysql.select("tb_manager",Manager.FIELDS);
+				MySQLIntrop.getMySQL().select("tb_manager",Manager.FIELDS);
 		if(result != null)//LIST ARE UNORDERED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		{
 			for(HashMap<String,String> map : result)//check user
@@ -37,7 +38,6 @@ public class ManagerDaoImple implements ManagerDao
 		}
 		return -1;
 	}
-	
 	
 
 }
