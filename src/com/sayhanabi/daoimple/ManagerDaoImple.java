@@ -10,51 +10,29 @@ import com.sayhanabi.vo.Manager;
 
 public class ManagerDaoImple implements ManagerDao 
 {
-
+	public static void main(String[] args)
+	{
+		ManagerDao dao = new ManagerDaoImple();
+		System.out.println(dao.authenticationManager("admin", "admin"));		
+	}
+	
 	@Override
 	public int authenticationManager(String username, String password) 
 	{
-		int id = -1;
-		boolean check[] = {false,false};//0-id,1-name
+		int id = -1;		
+		MySQLIntrop mysql = new MySQLIntrop();
+		mysql.connect();
 		List<HashMap<String,String>> result = 
-				MySQLIntrop.getMySQL().select("tb_manager",Manager.FIELDS);
-		if(result != null)
+				mysql.select("tb_manager",Manager.FIELDS);
+		if(result != null)//LIST ARE UNORDERED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		{
 			for(HashMap<String,String> map : result)//check user
 			{
-				for (Map.Entry<String, String> entry : map.entrySet())//check 
-	        	{
-					if(entry.getKey().equals(Manager.FIELDS[0]))//check id
-					{
-						id = Integer.parseInt(entry.getValue());
-						{
-							check[0] = true;//id get!
-							continue;//check name
-						}
-					} 
-					if(check[1] == false)//if name checked then check password
-					{
-						if(entry.getKey().equals(Manager.FIELDS[1]))//check user-name
-						{
-							if(entry.getValue().equals(username))
-							{
-								check[1] = true;//name checked
-								continue;//check password
-							}
-						} 
-					}
-					else
-					{
-						if(entry.getKey().equals(Manager.FIELDS[2]))//check password
-						{
-							if(entry.getValue().equals(password))//here the guy we want
-							{
-								return id;
-							}
-						} 
-					}
-	        	}
-				
+				id = -1;
+				if(map.get(Manager.FIELDS[1]).equals(username) && map.get(Manager.FIELDS[2]).equals(password))
+				{
+					return Integer.parseInt(map.get(Manager.FIELDS[0]));
+				}
 			}
 		}
 		return -1;
