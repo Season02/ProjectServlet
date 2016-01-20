@@ -17,8 +17,8 @@
 		<div class="login">
 			<div class="caption">帐号登陆</div>
 			<form action="LoginServlet" method="post">
-				<input id="username" name="username" placeholder="请输入帐号" class="user-name" type="text">
-				<input id="password" name="password" placeholder="请输入密码" class="pass-word" type="password" autocomplete="off">
+				<input id="username" name="username" required="required" autofocus="autofocus" placeholder="请输入帐号" class="user-name" type="text">
+				<input id="password" name="password" required="required" placeholder="请输入密码" class="pass-word" type="password" autocomplete="off">
 				<div class="error-mess">
 					<span class="error-icon"></span><span id="error-message">帐户名或登录密码不正确，请重新输入</span>
 				</div>
