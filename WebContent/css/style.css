@@ -20,9 +20,12 @@
 }
 .displayPanel
 {
-	position: fixed;
-	bottom:8px;
 	width: 100%;
+}
+.end-fix
+{	
+	position:fixed;
+	bottom:8px;
 }
 .timer
 {
@@ -43,9 +46,8 @@
 }
 .contentPanel
 {
-	opacity:0.96;
-	margin:0 auto;
-	margin-top:76px;
+	opacity:0.95;
+	margin:10% auto;
 	padding:0px;
 	width:420px;
 	height:auto;
@@ -53,6 +55,7 @@
 	border-radius:4px;
 	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;	
 	border: 2px solid #e1e1e1;
+	text-align:center;
 }
 .area1
 {
@@ -157,8 +160,8 @@ body
 	/*padding-bottom: 40px;*/
 	/*padding-top: 60px;*/
 	/*min-height: 101%;*/
-	background:url(picture/bc.jpg) no-repeat center;
-	background-size:auto auto;
+	background:url(picture/bc.jpg) no-repeat left;
+	background-size:1300px;
 	background-attachment:fixed;
 	color: #404040;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
