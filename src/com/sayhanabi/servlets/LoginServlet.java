@@ -22,6 +22,7 @@ public class LoginServlet extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
     public LoginServlet() {
+    	
         super();
         // TODO Auto-generated constructor stub
     }
@@ -51,12 +52,12 @@ public class LoginServlet extends HttpServlet {
         if(( id = DaoFactory.getManager().authenticationManager(username, password) ) > -1)
         {
         	request.setAttribute("id",id);
-            response.sendRedirect("success.jsp") ;
+            response.sendRedirect("pages/manager/manager.jsp") ;
         }
         else
         {
             session.setAttribute("message", "用户名或密码不匹配。");
-            response.sendRedirect("fail.jsp") ;
+            response.sendRedirect("pages/message/fail.jsp") ;
         }
 
 //        //设置编码格式  
