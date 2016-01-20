@@ -28,19 +28,13 @@ public class MySQLIntrop
 	 */
 	public static MySQLIntrop getMySQL()
 	{
+		if(instance.connection == null)
+			instance.connect();
 		return instance;
 	}
 	
 	private MySQLIntrop()
 	{
-		if(connect())
-		{
-			
-		}
-		else
-		{
-			
-		}
 	}
 	
 	public static void main(String[] args)
@@ -55,8 +49,8 @@ public class MySQLIntrop
 		dbc.connect();
 //		dbc.alter("test", "code");
 //		System.out.println(dbc.disconnect());
-		String[] arg = {"id","age","sex"};
-		List<HashMap<String,String>> list = dbc.select("student",arg);
+		String[] arg = {"id","manager","password"};
+		List<HashMap<String,String>> list = dbc.select("tb_manager",arg);
 		for(HashMap<String,String> map : list)
 		{
 			for(Map.Entry<String, String> entry : map.entrySet())
@@ -65,7 +59,6 @@ public class MySQLIntrop
 			}
 			System.out.print("");
 		}
-		
 		
 		//if(dbc.connect())
 			//System.out.println(dbc.delete("student",10));
