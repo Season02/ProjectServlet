@@ -6,23 +6,36 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Hello Hello ~!</title>
 	<style type="text/css">
-		<%@include file="/css/style.css" %>
+		<%@include file="/css/index.css" %>
 	</style>
 	<script src="/ProjectServlet/js/roll.js"></script>
 	<% java.net.InetAddress address = java.net.InetAddress.getLocalHost(); %>
 	<% java.lang.String ip = address.getHostAddress(); %>
+	<%
+		String path = request.getContextPath();
+		String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+	%>
+	<%
+		String message = "what?";
+		message = (String)session.getAttribute("message") == null?"":(String)session.getAttribute("message");
+	%>
 </head>
 <body>
 	<div class="contentPanel">		
 		<div class="login">
 			<div class="caption">帐号登陆</div>
 			<form action="LoginServlet" method="post">
-				<input id="username" name="username" required="required" autofocus="autofocus" placeholder="请输入帐号" class="user-name" type="text">
+				<input id="username" name="username" required="what?" autofocus="autofocus" placeholder="请输入帐号" class="user-name" type="text">
 				<input id="password" name="password" required="required" placeholder="请输入密码" class="pass-word" type="password" autocomplete="off">
 				<div class="error-mess">
-					<span class="error-icon"></span><span id="error-message">帐户名或登录密码不正确，请重新输入</span>
+					<span class="error-icon"></span><span id="error-message"><%=message %></span>
 				</div>
 				<input class="logging" type="submit" value="登录" />
+				<div class="line"></div>
+				<div class="register">
+					<span clsaa="hit">需要一个帐号?</span>
+					<a href="/mnager/register.jsp">立即注册</a>				
+				</div>
         	</form>
 		</div>
     	<div class="area1" >   	
@@ -41,7 +54,7 @@
             <input value="servlet" type="button" 
 			onClick="javascript:window.location='HelloServlet?user=Season02'" />
 			<h2>
-			Hello finally meet you!
+				Hello finally meet you!
 			</h2>
         </div>
     </div>
@@ -53,8 +66,9 @@
     	</div>
     </div>
 	<div id="header" class="headline">
+	
 		<div class="ipPanel">
-			<%= address.getHostAddress() %>
+			<%=basePath.toString() %>
 			${pageContext.request.contextPath}
 		</div>
 	</div>

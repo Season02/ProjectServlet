@@ -18,5 +18,9 @@ public class DaoFactory
 		return manager;
 	}
 	
+	private DaoFactory()
+	{
+		
+	}
 	
 }

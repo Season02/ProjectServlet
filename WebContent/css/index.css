@@ -71,6 +71,7 @@
 {
 	margin: 10% auto;
 	width:80%;
+	display:block;
 }
 .login .caption
 {
@@ -90,6 +91,34 @@
 	margin-top: 3px;
 	color: #b74d46;
 	width: 100%;
+}
+.login .line 
+{
+	background: #eee;
+	height: 1px;
+	margin-top: 10px;
+}
+.register
+{
+	padding: 20px;
+}
+.register .hit
+{
+	margin: 0 auto;	
+	font-weight: normal;
+	font-size: 1.25em;
+}
+.register a
+{
+	text-decoration:none;
+	margin: 0 auto;	
+	font-weight: normal;
+	font-size: 1.1em;
+}
+.register a:hover 
+{
+	color: #2a6496;
+	text-decoration: underline;
 }
 .user-name, .pass-word
 {
